@@ -8,9 +8,6 @@ import {
 
 const authorize = async () => {
   try {
-    console.log(" spotify_client_id " + spotify_client_id);
-    console.log(" spotify_client_secret " + spotify_client_secret);
-
     const authOptions = {
       method: "post",
       url: "https://accounts.spotify.com/api/token",

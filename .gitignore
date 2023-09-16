@@ -5,10 +5,14 @@
 node_modules
 
 # test file I used while creating the project, useful to me to just ignoring it.
-src/test.test
+src/test.ts
 
 # lock file bun creates after getting deps.
 bun.lockb
 
+# lock file npm creates after getting deps.
+package-lock.json
+
 # token file that gets generated after auth with youtube suceeds.
 token.json
+

@@ -1,15 +1,8 @@
-import axios from "axios";
-import cheerio from "cheerio";
-import { YoutubeSearchResult } from "./models";
 const youtubesearchapi = require("youtube-search-api");
-
-const delay = (delayInms: number) => {
-  return new Promise((resolve) => setTimeout(resolve, delayInms));
-};
 
 const search = async () => {
   try {
-    var res: YoutubeSearchResult = await youtubesearchapi.GetListByKeyword(
+    var res = await youtubesearchapi.GetListByKeyword(
       "marques brownlee iphone 14",
       false,
       1,

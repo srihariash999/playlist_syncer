@@ -27,7 +27,6 @@ const delay = (delayInms: number) => {
 const authorize = async () => {
   try {
     const token = fs.readFileSync(TOKEN_PATH);
-    console.log(" token " + token);
     oAuth2Client.setCredentials(JSON.parse(token.toString()));
     console.log(" Auth initialised for youtube client ");
     return true;
@@ -175,6 +174,7 @@ const searchAndAddSongToPlaylist = async (
   songName: string,
   playlistId: string
 ) => {
+  console.log(" Trying to search for song : " + songName);
   // Step 1: Search for the song by its name
   let videoId: string | null | undefined;
   if (useUnofficial === "1") {
@@ -189,8 +189,11 @@ const searchAndAddSongToPlaylist = async (
     );
     return;
   }
+  console.log(
+    ` found the song(${songName}) after searching, now trying to add it to playlist. `
+  );
   // Step 2: Add the found video to the specified playlist
-  addSongToYoutubePlaylist(videoId, playlistId);
+  await addSongToYoutubePlaylist(videoId, playlistId);
 };
 
 const main = async () => {
@@ -205,7 +208,6 @@ const main = async () => {
   await authorize();
 
   for (var element of spotifyPlaylist.tracks.items) {
-    console.log(" Trying to add song : " + element.track.name);
     const songName = `${element.track.name} ${element.track.artists[0].name}`;
     await searchAndAddSongToPlaylist(songName, myYtPlaylistId);
     await delay(5000);
