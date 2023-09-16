@@ -177,7 +177,7 @@ const searchAndAddSongToPlaylist = async (
 ) => {
   // Step 1: Search for the song by its name
   let videoId: string | null | undefined;
-  if (useUnofficial) {
+  if (useUnofficial === "1") {
     videoId = await searchSongByNameUnofficial(songName);
   } else {
     videoId = await searchSongByNameYoutubeOfficial(songName);

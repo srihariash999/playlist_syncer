@@ -2,7 +2,7 @@
 
 #### Simple project that fetches the tracks in a spotify playlist, searches them one by one on YT and adds them to a YT Music Playlist.
 
-### Installation
+### Installation / Usage
 
 0. Create a project on [google cloud console](https://console.cloud.google.com/welcome) to get the secrets. Also create a [dev account for spotify](https://developer.spotify.com/) to get those secrets too.
 1. Clone the repo
