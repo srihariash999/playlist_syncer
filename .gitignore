@@ -1,0 +1,14 @@
+# env file containing info that gets populated in src/constants.ts
+.env
+
+# node modules that get fetched after getting deps.
+node_modules
+
+# test file I used while creating the project, useful to me to just ignoring it.
+src/test.test
+
+# lock file bun creates after getting deps.
+bun.lockb
+
+# token file that gets generated after auth with youtube suceeds.
+token.json
