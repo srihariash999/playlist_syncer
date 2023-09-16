@@ -19,7 +19,7 @@ git clone https://github.com/srihariash999/playlist_syncer.git
    ```sh
    npm install
    ```
-4. Copy the contents from [`sample.json`](https://github.com/srihariash999/playlist_syncer/blob/main/config/sample.env) to a new file named `.env` and place it at the root of the project.
+4. Copy the contents from [`sample.env`](https://github.com/srihariash999/playlist_syncer/blob/main/config/sample.env) to a new file named `.env` and place it at the root of the project.
 5. Replace the default values filled in the file with real Ids and Secrets. Project can use either youtube's search API to search for a track or can use a webscraping method (which can save API quota costing). Using offical is recommended and the variable `useUnofficial` determines which is used. This variable having value "0" makes use of official search API and value "1" will use unofficial(web scraping) method.
 6. Run the program using bun:
 
